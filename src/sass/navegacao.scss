@@ -1,0 +1,326 @@
+@import "./sass/imports.scss";
+@import "./sass/include.scss";
+
+:root{
+    --white: #fff;
+    --black: #000;
+    --purple: #800080;
+    --bg-color-1: #370250;
+    --bg-color-2: #771CA3;
+    --bg-color-3: #860068;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Rubik", sans-serif;
+}
+
+header{
+    width: auto;
+    height: 14vh;
+}
+.cabeçalho{
+    display: $flex;
+    width: $vw;
+    height: 14vh;
+    background-color: var(--black);
+
+
+    .area_themeSwitcher{
+        position: relative;
+        top: 3.25rem;
+        left: 5rem;
+    }
+    .themeSwitcher{
+        background-color: var(--black);
+        border: double var(--white);
+        border-radius: 1vb;
+        font-weight: bold;
+        border: .125rem solid var(--white);
+        color: var(--white);
+        width: 10rem;
+        height: 2rem;
+        transition: .15s;
+    }
+    
+    .themeSwitcher:hover {
+        background-color: var(--white);
+        color: var(--black);
+        transform: scale(1.1);
+    }
+    
+    .perfil{
+        position: relative;
+        top: 2.25rem;
+        left: 30rem;
+        .perfil_icon:hover{
+            filter: brightness($filter);
+        }
+    }
+    .links{
+        @include center($flex,$center,$center);
+        position: relative;
+        left: 10rem;
+        a {
+            transition: .15s;
+            text-decoration: $none;
+            color: var(--white);
+            font-size: 22px;
+            margin-left: 35px;
+        }
+        
+        a:hover{
+            padding: 0.5rem;
+            border: 3px solid var(--white);
+            border-style: double;
+            border-radius: 10px;
+
+        }
+    }
+    
+    
+    .logo_area{
+        margin-left: 20px;
+        display: $flex;
+        .logo{
+            background-color: var(--white);
+            margin-bottom: 10px;
+            margin-top: 10px;
+        }
+    }
+    .serch_area{
+        position: relative;
+        top: 3rem;
+        left: 20rem;
+        .search{
+            height: 35px;
+            width: 240px;
+            border: 2px solid transparent;
+            border-radius: 5px;
+            background-color: var(--white);
+            &:hover{
+                filter: brightness($filter);
+            }
+            
+        }
+        .submit{
+        @include center($flex,$center,$center);
+        width: 40px;
+        height: 25px;
+        cursor: pointer;
+        border: 0;
+        border-top-right-radius: 10px;
+        position: absolute;
+        top:5px;
+        right: 0;
+        background-color:transparent;
+    
+        &:hover{
+            filter: brightness($filter);
+        }
+        i{
+            color: var(--black);
+
+            &:hover{
+            filter: brightness($filter)
+        }}
+    }
+    }
+}
+
+::-webkit-input-placeholder {
+    color: var(--black);
+ }
+
+body{
+    background: linear-gradient(150deg, var(--bg-color-1) 16.73%, var(--bg-color-2) 50.04%, var(--bg-color-3) 83.35%);
+    width: $vw;
+    height: $vh;
+        
+    
+    .slider{
+        position: relative;
+        top: 7rem;
+        margin: 0 auto ;
+        width: 800px;
+        height: 400px;
+        overflow: hidden;
+    }
+    .slides{
+        width: 400%;
+        height: 400px; 
+        display: flex;
+
+        input{
+            display: none;
+        }
+    }
+    .slide{
+        width: 25%;
+        position: relative;
+
+        img{
+            width: 800px;
+        }
+    }
+    .manual_navigation{
+        position: absolute;
+        width: 800px;
+        margin-top: -40px;
+        display: flex;
+        justify-content: center;
+
+    }
+    .manual_btn{
+        border: 2px solid var(--white);
+        padding: 5px;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: 1s;
+
+        &:not(:last-child){
+            margin-right: 40px;
+        }
+        &:hover{
+            background-color: var(--black);
+        }
+    }
+    #radio1:checked ~ .first{
+        margin-left: 0;
+    }
+    #radio2:checked ~ .first{
+        margin-left: -25%;
+    }
+    #radio3:checked ~ .first{
+        margin-left: -50%;
+    }
+    #radio4:checked ~ .first{
+        margin-left: -75%;
+    }
+
+    .navigation_auto{
+        position: absolute;
+        width: 800px;
+        margin-top: 360px;
+        display: flex;
+        justify-content: center;
+        div{
+            border: 2px solid #20a6ff;
+            padding: 5px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 1s;
+
+            &:not(:last-child){
+                margin-right: 40px;
+            }
+        }
+    }
+    #radio1:checked ~ .navigation_auto .auto_btn1{
+        background-color: var(--black);
+
+    }
+    #radio2:checked ~ .navigation_auto .auto_btn2{
+        background-color: var(--black);
+        
+    }
+    #radio3:checked ~ .navigation_auto .auto_btn3{
+        background-color: var(--black);
+        
+    }
+    #radio4:checked ~ .navigation_auto .auto_btn4{
+        background-color: var(--black);
+        
+    }
+
+}
+
+@media (max-height: 600px){
+    header{
+        height: 200px;
+    }
+    .cabeçalho{
+        height: 200px;
+
+        .perfil{
+            position: relative;
+            top: 75px;
+        .links{
+            left: 0;
+            a{
+                font-size: 12px;
+                margin-left: 10px;
+            }
+        }
+    }
+    }
+    .slider{
+        height: 100px;
+        
+    }
+    body {
+        .slide{
+        width: 25%;
+        position: relative;
+
+        img{
+            height: 200px;
+        }
+        .manual_navigation{
+            bottom: 200px;
+            right: 2000px;
+        }
+    }
+}
+}
+@media (max-width: 400px){
+    .logo, .themeSwitcher, .serch_area{
+        display: none;
+        width: 0;
+        height: 0;
+    }
+    header{
+        width: 400px;
+    }
+    .cabeçalho{
+        width: 400px;
+
+        .logo_area{
+            margin-left: 0;
+        }
+        .perfil{
+            position: relative;
+            left: 0;
+            margin-right: 10px;
+            .perfil_icon{
+                width: 50px;
+            }}
+        .links{
+            left: 0;
+            a{
+                font-size: 12px;
+                margin-left: 10px;
+            }
+        }
+    }
+    .slider{
+        width: 200px;
+        position: relative;
+        left: 50px;
+    }
+    body {
+        .slide{
+        width: 25%;
+        position: relative;
+
+        img{
+            width: 300px;
+        }
+        .manual_navigation{
+            bottom: 200px;
+            right: 2000px;
+        }
+    }
+}}

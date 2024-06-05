@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DRM profile</title>
+    <script src="../js/script_pages.js" defer></script>
+    <link rel="stylesheet" href="../style/style_navegacao/style/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" type="image/x-icon" href="../img/DRM.png">
+</head>
+<!-- Corpo como tema dark para a troca de tema a partir de um botão -->
+<body data-theme="dark">  
+
+    <!--Cabeçalho do site contendo um header para melhorar a semântica-->
+    <header>
+        <!-- Cabeçalho do site indicando o conteúdo que ele vai possuir -->
+        <div class="cabeçalho">
+
+            <!-- Área da logo do site -->
+            <div class="logo_area">
+                <img src="../img/DRM.png" alt="logo" class="logo" id="logo">
+            </div>
+            <!--Fim da Área da logo do site -->
+
+            <!-- Área temporaria do botão de troca de temas -->
+            <div class="area_themeSwitcher"> <button id="themeSwitcher" class="themeSwitcher">Tema claro / escuro</button></div>
+            <!--Fim da Área temporaria do botão de troca de temas -->
+
+            <!-- Área dos links para navegação -->
+            <div class="links">
+                <a class="inicio" href="../../index.html">Início</a>
+                <a class="monitoria" href="./monitoria.html">Monitoria</a>
+                <a class="materias" href="./materias.html">Matérias</a>
+                <a class="olimpiadas" href="./olimpiadas.html">Olimpiadas</a>
+                <a class="enem" href="./enem.html">ENEM</a>
+                <a class="conta" href="./criar_conta.html">Criar / registrar</a>
+            </div>
+            <!--Fim da Área dos links para navegação -->
+
+            <!-- Área para futura pesquisas de posts feitos -->
+            <div class="serch_area">
+                <input type="text" name="search" id="search" class="search" placeholder="Pesquise algo">
+                <button type="submit" class="submit" id="button_search"><i class="fa fa-search" ></i></button>
+            </div>
+            <!--Fim da Área para futura pesquisas de posts feitos -->
+            
+            <!-- Área para o ícone de perfil -->
+            <div class="perfil">
+                <img src="../img/icon.svg" alt="perfil icon" class="perfil_icon">
+            </div>
+            <!--Fim da Área para o ícone de perfil -->
+        </div>
+    </header>
+    <!--Fim do Cabeçalho do site contendo um header para melhorar a semântica-->
+
+    <!-- Área para a passagem de imagens -->
+    <div class="slider">
+        <div class="slides">
+            <!-- Rádio buttons -->
+        
+            <input type="radio" name="radio_btn" id="radio1">
+            <input type="radio" name="radio_btn" id="radio2">
+            <input type="radio" name="radio_btn" id="radio3">
+            <input type="radio" name="radio_btn" id="radio4">
+
+            <!--Fim  Rádio buttons -->
+
+            <!-- Slide imagens -->
+            <div class="slide first">
+                <img src="../img/obmep.webp" alt="imagem 1">
+            </div>
+
+            <div class="slide">
+                <img src="../img/enem.webp" alt="imagem 2">
+            </div>
+
+            <div class="slide">
+                <img src="../img/oba.jpg" alt="imagem 3">
+            </div>
+
+            <div class="slide">
+                <img src="../img/mobfog.jpg" alt="imagem 4">
+            </div>
+
+             <!--Fim Slide imagens -->
+
+             <!-- Navigation auto -->
+             <div class="navigation_auto">
+                <div class="auto_btn1"></div>
+                <div class="auto_btn2"></div>
+                <div class="auto_btn3"></div>
+                <div class="auto_btn4"></div>
+             </div>
+             <!--Fim do Navigation auto -->
+        </div>
+        
+        <div class="manual_navigation">
+            <label for="radio1" class="manual_btn"></label>
+            <label for="radio2" class="manual_btn"></label>
+            <label for="radio3" class="manual_btn"></label>
+            <label for="radio4" class="manual_btn"></label>
+        </div>
+    </div>
+</body>
+</html>
